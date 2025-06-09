@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Glass LLC - Expert Glazing & Skilled Labor Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Alpine.js for interactivity -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        /* Applying the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Header & Navigation -->
+    <header x-data="{ mobileMenuOpen: false }" class="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 text-white">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo con Texto y Imagen -->
+            <a href="#" class="flex items-center space-x-3">
+                <!-- Imagen del Logo -->
+                <!-- Asegúrate de que la ruta src="logo-3.jpeg" sea correcta. -->
+                <img src="/img/logo-3.jpeg" alt="Ethan's Glass LLC Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x50/1e293b/ffffff?text=Logo';">
+                
+                <!-- Nombre de la Compañía -->
+                <span class="text-2xl font-bold">Ethan's Glass LLC</span>
+            </a>
+
+            <!-- Menú de escritorio -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-slate-300 hover:text-white transition duration-300">Services</a>
+                <a href="#why-us" class="text-slate-300 hover:text-white transition duration-300">Why Us</a>
+                <a href="#projects" class="text-slate-300 hover:text-white transition duration-300">Projects</a>
+                <a href="#contact" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow">
+                    Request a Quote
+                </a>
+            </div>
+
+            <!-- Botón del menú móvil -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-slate-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="md:hidden bg-slate-800 shadow-lg">
+            <a href="#services" class="block px-6 py-3 text-slate-300 hover:bg-slate-700 hover:text-white">Services</a>
+            <a href="#why-us" class="block px-6 py-3 text-slate-300 hover:bg-slate-700 hover:text-white">Why Us</a>
+            <a href="#projects" class="block px-6 py-3 text-slate-300 hover:bg-slate-700 hover:text-white">Projects</a>
+            <a href="#contact" class="block px-6 py-3 bg-blue-600 text-white text-center font-bold hover:bg-blue-700">Request a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center text-white">
+            <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
+            <img src="/img/modern-building-1.jpg" alt="Modern building with glass facade" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/333/fff?text=Modern+Building';">
+            <div class="relative z-10 text-center px-4 py-24">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-shadow">Glazing Solutions & Expert Manpower</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-shadow">We provide premier glass fabrication and installation, and supply the skilled labor your project needs to succeed.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#services" class="bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg">View Our Services</a>
+                    <a href="#contact" class="bg-slate-100 text-blue-600 py-3 px-8 rounded-lg text-lg font-semibold hover:bg-slate-200 transition duration-300 shadow-lg">Hire Skilled Labor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Our Comprehensive Services</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">From fabrication and installation to labor supply, we cover all your glazing industry needs.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Glass Installation Services -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200 hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                             <svg class="w-10 h-10 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2 1M4 7l2-1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                            <h3 class="text-2xl font-bold text-slate-900">Installation & Fabrication</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6">We deliver top-quality glazing projects for the residential, commercial, and industrial sectors.</p>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Storefront & Curtain Wall</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Pre-Glazed & Unitized Glass</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Punch Window Installation</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Wet Glazing & Caulking (Exterior/Interior)</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> General Glass Installation</li>
+                        </ul>
+                    </div>
+                    <!-- Labor Supply Services -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200 hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-10 h-10 text-blue-600 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15 6.344C15 4.507 13.493 3 11.656 3H9.344C7.507 3 6 4.507 6 6.344V9H3v2h3v1.656C6 14.493 7.507 16 9.344 16h2.312c1.837 0 3.344-1.507 3.344-3.344V11h3V9h-3V6.344ZM8 6.344C8 5.613 8.613 5 9.344 5h2.312C12.387 5 13 5.613 13 6.344V9H8V6.344ZM17 12h2v3h-2v-3Zm2 5h-2v3h2v-3Z"/><path d="M13 12.656V11H8v1.656C8 13.387 8.613 14 9.344 14h2.312c.731 0 1.344-.613 1.344-1.344ZM17 4h2v3h-2V4Zm2 5h-2v1h2V9Z"/></svg>
+                            <h3 class="text-2xl font-bold text-slate-900">Labor Supply</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6">We have a team of 30+ journeyman glaziers ready to integrate into your project.</p>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> OSHA 10 & 30 Certified</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Certified in Machinery Operation</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Trained in Fall Protection</li>
+                            <li class="flex items-start"><span class="text-blue-500 font-bold mr-2">&#10003;</span> Team of Professional Caulkers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">The Ethan's Glass Difference</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Commitment, safety, and quality are the pillars of our service.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="text-center p-6">
+                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944a11.955 11.955 0 0118 0c.001-.06.002-.12.002-.18a12.02 12.02 0 00-4.382-8.122z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Certified Safety</h3>
+                        <p class="text-slate-600">Our staff holds OSHA certifications, ensuring a safe working environment.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l-1.414-1.414M19.778 19.778l-1.414-1.414M18.364 5.636l1.414-1.414M4.222 19.778l1.414-1.414M12 12a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Quality & Experience</h3>
+                        <p class="text-slate-600">Years of experience in residential, commercial, and industrial projects back our work.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Professional Team</h3>
+                        <p class="text-slate-600">A robust team of 30+ journeyman glaziers ready for action.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="text-center p-6">
+                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Licensed & Insured</h3>
+                        <p class="text-slate-600">We operate with full workers compensation, liability, and commercial general liability insurance for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Featured Projects</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Our work speaks for itself. See the quality and precision in every project we undertake.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="/img/horizon-bank-2.jpg" alt="Commercial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+1';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                            <h3 class="text-white text-xl font-bold text-shadow">Horizon Bank Austin Texas</h3>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="/img/residential-building.jpg" alt="Residential Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+2';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                            <h3 class="text-white text-xl font-bold text-shadow">Luxury Residence</h3>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="/img/kelloggs-2.jpg" alt="Industrial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+3';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                            <h3 class="text-white text-xl font-bold text-shadow">Kellogg's Northgate Plaza</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Request a Quote</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Complete the form and our team will contact you to discuss your project needs.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-white p-8 sm:p-10 rounded-xl shadow-lg border border-slate-200">
+                    <form action="https://formspree.io/f/mrbkeazr" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Contact Info -->
+                            <div>
+                                <label for="full-name" class="block text-sm font-medium text-slate-700">Full Name</label>
+                                <input type="text" name="full-name" id="full-name" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-slate-700">Company</label>
+                                <input type="text" name="company" id="company" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+                                <input type="email" name="email" id="email" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-slate-700">Phone</label>
+                                <input type="tel" name="phone" id="phone" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                             <div class="md:col-span-2">
+                                <label for="service-type" class="block text-sm font-medium text-slate-700">Service of Interest</label>
+                                <select id="service-type" name="service-type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-slate-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                                    <option value="">Select an option...</option>
+                                    <option value="installation">Glass Installation & Fabrication</option>
+                                    <option value="labor">Skilled Labor Supply</option>
+                                    <option value="both">Both Services</option>
+                                </select>
+                            </div>
+
+                            <!-- Project Details -->
+                            <hr class="md:col-span-2 my-4 border-slate-200">
+                            <h4 class="md:col-span-2 text-lg font-semibold text-slate-800">Project Details</h4>
+                            
+                            <div>
+                                <label for="project-type" class="block text-sm font-medium text-slate-700">Project Type</label>
+                                <select id="project-type" name="project-type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-slate-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                                    <option>Not specified</option>
+                                    <option>Commercial</option>
+                                    <option>Residential</option>
+                                    <option>Industrial</option>
+                                </select>
+                            </div>
+                             <div>
+                                <label for="zip-code" class="block text-sm font-medium text-slate-700">Project Zip Code</label>
+                                <input type="text" name="zip-code" id="zip-code" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="start-date" class="block text-sm font-medium text-slate-700">Estimated Start Date</label>
+                                <input type="date" name="start-date" id="start-date" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                             <div>
+                                <label for="duration" class="block text-sm font-medium text-slate-700">Estimated Duration</label>
+                                <input type="text" name="duration" id="duration" placeholder="e.g., 3 weeks, 2 months" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                             <div class="md:col-span-2">
+                                <label for="glaziers-needed" class="block text-sm font-medium text-slate-700">Number of Glaziers Needed (if applicable)</label>
+                                <input type="number" name="glaziers-needed" id="glaziers-needed" min="1" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="scope" class="block text-sm font-medium text-slate-700">Job Description</label>
+                                <textarea id="scope" name="scope" rows="4" class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Briefly describe the scope of work, materials, or the type of personnel you need..."></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-right">
+                            <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Send Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/525577855128" target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110 z-50 flex items-center justify-center">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Ethan's Glass LLC</h3>
+                    <p class="text-slate-400">Your trusted partner in glazing solutions and skilled labor.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="tel:2816059379" class="hover:text-white">(281) 605-9379</a></li>
+                        <li>25525 Oakhurst Forest DR.</li>
+                        <li>Porter TX 77365</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-white">Why Us</a></li>
+                        <li><a href="#contact" class="hover:text-white">Request a Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Ethan's Glass LLC. All rights reserved.</p>
+                <p class="mt-1">Web Design by Andrés Cortés</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
