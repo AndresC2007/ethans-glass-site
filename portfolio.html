@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ethan's Glass LLC</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Alpine.js for interactivity -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Asegura que el scroll-padding-top evite que el header cubra el título de la sección */
+        [id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Header Sencillo -->
+    <header class="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 text-white">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="/img/logo.jpeg" alt="Ethan's Glass LLC Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x50/1e293b/ffffff?text=Logo';">
+                <span class="text-2xl font-bold">Ethan's Glass LLC</span>
+            </a>
+            <a href="index.html#projects" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow">
+                &#8592; Volver a Proyectos
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project 1: Horizon Bank -->
+        <section id="project-1" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Horizon Bank | Austin, Texas</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Un vistazo detallado al proceso de instalación y los resultados finales.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto0.jpg'  },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto1.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto2.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto3.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto4.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto5.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto6.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto7.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto8.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto9.jpeg' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto10.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto11.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto12.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto13.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto14.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto15.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto16.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto17.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto18.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto19.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto20.jpeg'},
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Slides -->
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
+                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
+                        </div>
+                    </template>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 2: Hyundai Charlie Clark -->
+        <section id="project-2" class="py-16 md:py-24 bg-slate-100">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Hyundai Charlie Clark | Laredo, Texas</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Detalles de la fachada y acabados de cristal de este proyecto.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto0.jpg'  },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto1.jpeg' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto2.jpeg' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto3.jpeg' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto4.jpeg' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto5.jpeg' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto6.jpeg' },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Slides -->
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
+                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
+                        </div>
+                    </template>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 3: Kellogg's -->
+        <section id="project-3" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Kellogg's Northgate Plaza | Rogers, Arkansas</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Soluciones de acristalamiento para un gigante industrial.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto0.jpg'   },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto1.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto2.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto3.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto4.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto5.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto6.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto7.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto8.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto9.jpeg'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto10.jpeg' },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto11.jpeg' },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto12.jpeg' },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Slides -->
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
+                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
+                        </div>
+                    </template>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 4: Valley Strong -->
+        <section id="project-4" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Valley Strong Credit Union | Fairfield, California</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Cristal de seguridad y diseño moderno para instituciones financieras.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto0.jpg'   },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto1.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto2.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto3.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto4.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto5.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto6.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto7.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto8.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto9.jpeg'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto10.jpeg' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto11.jpeg' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto12.jpeg' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto13.jpeg' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto14.jpeg' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto15.jpeg' },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Slides -->
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
+                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
+                        </div>
+                    </template>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="mt-10 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Ethan's Glass LLC. All rights reserved.</p>
+                <p class="mt-1">Web Design by Andrés Cortés</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
