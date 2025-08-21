@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Alpine.js for interactivity -->
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Google reCAPTCHA Script -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -205,41 +205,73 @@
             </div>
         </section>
         
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Featured Projects</h2>
-                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Our work speaks for itself. See the quality and precision in every project we undertake.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="/img/horizon-bank-2.jpg" alt="Commercial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+1';">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-white text-xl font-bold text-shadow">Horizon Bank | Austin, Texas</h3>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="/img/hyundaiCharlieClark.jpg" alt="Hyundai Charlie Clark building" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+2';">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-white text-xl font-bold text-shadow">Hyundai Charlie Clark | Laredo, Texas</h3>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="/img/kelloggs-2.jpg" alt="Industrial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+3';">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-white text-xl font-bold text-shadow">Kellogg's Northgate Plaza | Rogers, Arkansas</h3>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="/img/Valley-Strong.jpg" alt="Valley Strong Credit Union building" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+3';">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-white text-xl font-bold text-shadow">Valley Strong Credit Union | Fairfield, California</h3>
-                        </div>
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Featured Projects</h2>
+            <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Our work speaks for itself. See the quality and precision in every project we undertake.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-5xl lg:mx-auto">
+            
+            <!-- Proyecto 1: Horizon Bank -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="/img/horizon-bank-2.jpg" alt="Commercial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+1';">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity duration-300">
+                    <div>
+                        <h3 class="text-white text-xl font-bold text-shadow">Horizon Bank | Austin, Texas</h3>
+                        <!-- Botón a la galería del proyecto 1 -->
+                        <a href="portfolio.html#project-1" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md text-sm font-semibold">
+                            See gallery
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Proyecto 2: Hyundai Charlie Clark -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="/img/hyundaiCharlieClark.jpg" alt="Hyundai Charlie Clark building" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+2';">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity duration-300">
+                     <div>
+                        <h3 class="text-white text-xl font-bold text-shadow">Hyundai Charlie Clark | Laredo, Texas</h3>
+                         <!-- Botón a la galería del proyecto 2 -->
+                        <a href="portfolio.html#project-2" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md text-sm font-semibold">
+                            See gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: Kellogg's -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="/img/kelloggs-2.jpg" alt="Industrial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+3';">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity duration-300">
+                     <div>
+                        <h3 class="text-white text-xl font-bold text-shadow">Kellogg's Northgate Plaza | Rogers, Arkansas</h3>
+                         <!-- Botón a la galería del proyecto 3 -->
+                        <a href="portfolio.html#project-3" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md text-sm font-semibold">
+                            See gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Valley Strong -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="/img/Valley-Strong.jpg" alt="Valley Strong Credit Union building" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/800x600/ccc/fff?text=Project+4';">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity duration-300">
+                     <div>
+                        <h3 class="text-white text-xl font-bold text-shadow">Valley Strong Credit Union | Fairfield, California</h3>
+                         <!-- Botón a la galería del proyecto 4 -->
+                        <a href="portfolio.html#project-4" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md text-sm font-semibold">
+                            See gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Contact Form Section -->
         <section id="contact" class="py-20 bg-slate-100">
