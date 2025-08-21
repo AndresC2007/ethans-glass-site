@@ -26,7 +26,7 @@
         html {
             scroll-behavior: smooth;
         }
-        /* Asegura que el scroll-padding-top evite que el header cubra el título de la sección */
+        /* Ensure scroll-padding-top prevents the header from covering the section title */
         [id] {
             scroll-margin-top: 100px;
         }
@@ -34,7 +34,7 @@
 </head>
 <body class="bg-slate-100 text-slate-800">
 
-    <!-- Header Sencillo -->
+    <!-- Simple Header -->
     <header class="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 text-white">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
@@ -42,7 +42,7 @@
                 <span class="text-2xl font-bold">Ethan's Glass LLC</span>
             </a>
             <a href="index.html#projects" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow">
-                &#8592; Volver a Proyectos
+                &#8592; Back to Projects
             </a>
         </nav>
     </header>
@@ -53,7 +53,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Horizon Bank | Austin, Texas</h2>
-                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Un vistazo detallado al proceso de instalación y los resultados finales.</p>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">A detailed look at the installation process and final results.</p>
                 </div>
                 <!-- Carousel -->
                 <div x-data="{
@@ -82,12 +82,15 @@
                         { src: 'img/portfolioCarousel/horizon/horizonFoto20.jpeg'},
                     ]
                 }" class="relative max-w-5xl mx-auto">
-                    <!-- Slides -->
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
-                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
-                        </div>
-                    </template>
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
                     <!-- Prev/Next Buttons -->
                     <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
                         <i class="fas fa-chevron-left"></i>
@@ -104,7 +107,7 @@
              <div class="container mx-auto px-6">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Hyundai Charlie Clark | Laredo, Texas</h2>
-                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Detalles de la fachada y acabados de cristal de este proyecto.</p>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Details of this project's facade and glass finishes.</p>
                 </div>
                 <!-- Carousel -->
                 <div x-data="{
@@ -119,12 +122,15 @@
                         { src: 'img/portfolioCarousel/hyundai/hyundaiFoto6.jpeg' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
-                    <!-- Slides -->
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
-                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
-                        </div>
-                    </template>
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
                     <!-- Prev/Next Buttons -->
                     <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
                         <i class="fas fa-chevron-left"></i>
@@ -141,7 +147,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Kellogg's Northgate Plaza | Rogers, Arkansas</h2>
-                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Soluciones de acristalamiento para un gigante industrial.</p>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Glazing solutions for an industrial giant.</p>
                 </div>
                 <!-- Carousel -->
                 <div x-data="{
@@ -162,12 +168,15 @@
                         { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto12.jpeg' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
-                    <!-- Slides -->
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
-                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
-                        </div>
-                    </template>
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                           <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
                     <!-- Prev/Next Buttons -->
                     <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
                         <i class="fas fa-chevron-left"></i>
@@ -184,7 +193,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Valley Strong Credit Union | Fairfield, California</h2>
-                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Cristal de seguridad y diseño moderno para instituciones financieras.</p>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Security glass and modern design for financial institutions.</p>
                 </div>
                 <!-- Carousel -->
                 <div x-data="{
@@ -208,12 +217,15 @@
                         { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto15.jpeg' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
-                    <!-- Slides -->
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <div x-show="activeSlide === index + 1" class="rounded-lg overflow-hidden shadow-2xl" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
-                            <img :src="slide.src" alt="Project Image" class="w-full h-auto object-cover">
-                        </div>
-                    </template>
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
                     <!-- Prev/Next Buttons -->
                     <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
                         <i class="fas fa-chevron-left"></i>
