@@ -38,7 +38,7 @@
     <header class="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 text-white">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
-                <img src="/img/logo.jpeg" alt="Ethan's Glass LLC Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x50/1e293b/ffffff?text=Logo';">
+                <img src="/img/logo-final.png" alt="Ethan's Glass LLC Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x50/1e293b/ffffff?text=Logo';">
                 <span class="text-2xl font-bold">Ethan's Glass LLC</span>
             </a>
             <a href="index.html#projects" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow">
@@ -234,6 +234,89 @@
                 </div>
             </div>
         </section>
+        <!-- Project 5: LifeGenix Institute -->
+        <section id="project-5" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">LifeGenix Institute | Dallas, Texas</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Sleek, precision glazing for the state-of-the-art Lifegenix Institute.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-exterior-1.jpg'   },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-1.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-2.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-3.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-4.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-5.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-6.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-7.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-8.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-9.jpeg'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-10.jpeg' },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-11.jpeg' },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-12.jpeg' },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-2 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-2 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 6: State Normal School -->
+        <section id="project-6" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Valley City State University | North Dakota</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Historic replication and precision glazing for the iconic Old Main building at Valley City State University.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/state-normal/state-normal-exterior.jpeg'   },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal-1.jpeg'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal-2.jpeg'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal-3.jpeg'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal-4.jpeg'  },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-2 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-2 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>        
     </main>
 
     <!-- Footer -->
