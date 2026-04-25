@@ -6,7 +6,7 @@
     <title>Portfolio - Ethan's Glass LLC</title>
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/src/style.css" rel="stylesheet">
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
     <header class="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 text-white">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
-                <img src="/img/logo-final.png" alt="Ethan's Glass LLC Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x50/1e293b/ffffff?text=Logo';">
+                <img src="/img/logo-final.png" alt="Ethan's Glass LLC Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x50/1e293b/ffffff?text=Logo';" loading="lazy">
                 <span class="text-2xl font-bold">Ethan's Glass LLC</span>
             </a>
             <a href="index.html#projects" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow">
@@ -59,27 +59,27 @@
                 <div x-data="{
                     activeSlide: 1,
                     slides: [
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto0.jpg'  },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto1.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto2.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto3.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto4.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto5.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto6.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto7.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto8.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto9.jpeg' },
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto10.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto11.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto12.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto13.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto14.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto15.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto16.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto17.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto18.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto19.jpeg'},
-                        { src: 'img/portfolioCarousel/horizon/horizonFoto20.jpeg'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto0.webp'  },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto1.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto2.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto3.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto4.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto5.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto6.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto7.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto8.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto9.webp' },
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto10.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto11.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto12.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto13.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto14.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto15.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto16.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto17.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto18.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto19.webp'},
+                        { src: 'img/portfolioCarousel/horizon/horizonFoto20.webp'},
                     ]
                 }" class="relative max-w-5xl mx-auto">
                     <!-- Viewport with a fixed aspect ratio -->
@@ -113,13 +113,13 @@
                 <div x-data="{
                     activeSlide: 1,
                     slides: [
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto0.jpg'  },
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto1.jpeg' },
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto2.jpeg' },
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto3.jpeg' },
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto4.jpeg' },
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto5.jpeg' },
-                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto6.jpeg' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto0.webp'  },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto1.webp' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto2.webp' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto3.webp' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto4.webp' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto5.webp' },
+                        { src: 'img/portfolioCarousel/hyundai/hyundaiFoto6.webp' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
                     <!-- Viewport with a fixed aspect ratio -->
@@ -153,17 +153,17 @@
                 <div x-data="{
                     activeSlide: 1,
                     slides: [
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto0.jpg'   },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto3.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto4.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto5.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto6.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto7.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto8.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto9.jpeg'  },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto10.jpeg' },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto11.jpeg' },
-                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto12.jpeg' },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto0.webp'   },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto3.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto4.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto5.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto6.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto7.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto8.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto9.webp'  },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto10.webp' },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto11.webp' },
+                        { src: 'img/portfolioCarousel/Kelloggs/kelloggsFoto12.webp' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
                     <!-- Viewport with a fixed aspect ratio -->
@@ -197,22 +197,22 @@
                 <div x-data="{
                     activeSlide: 1,
                     slides: [
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto0.jpg'   },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto1.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto2.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto3.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto4.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto5.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto6.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto7.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto8.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto9.jpeg'  },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto10.jpeg' },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto11.jpeg' },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto12.jpeg' },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto13.jpeg' },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto14.jpeg' },
-                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto15.jpeg' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto0.webp'   },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto1.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto2.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto3.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto4.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto5.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto6.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto7.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto8.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto9.webp'  },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto10.webp' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto11.webp' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto12.webp' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto13.webp' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto14.webp' },
+                        { src: 'img/portfolioCarousel/valleyStrong/valleyStrongFoto15.webp' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
                     <!-- Viewport with a fixed aspect ratio -->
@@ -245,19 +245,19 @@
                 <div x-data="{
                     activeSlide: 1,
                     slides: [
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-exterior-1.jpg'   },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-1.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-2.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-3.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-4.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-5.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-6.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-7.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-8.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-9.jpeg'  },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-10.jpeg' },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-11.jpeg' },
-                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-12.jpeg' },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-exterior-1.webp'   },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-1.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-2.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-3.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-4.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-5.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-6.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-7.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-8.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-9.webp'  },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-10.webp' },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-11.webp' },
+                        { src: 'img/portfolioCarousel/lifegenix/lifegenix-12.webp' },
                     ]
                 }" class="relative max-w-5xl mx-auto">
                     <!-- Viewport with a fixed aspect ratio -->
@@ -291,11 +291,22 @@
                 <div x-data="{
                     activeSlide: 1,
                     slides: [
-                        { src: 'img/portfolioCarousel/state-normal/state-normal-exterior.jpeg'   },
-                        { src: 'img/portfolioCarousel/state-normal/state-normal-1.jpeg'  },
-                        { src: 'img/portfolioCarousel/state-normal/state-normal-2.jpeg'  },
-                        { src: 'img/portfolioCarousel/state-normal/state-normal-3.jpeg'  },
-                        { src: 'img/portfolioCarousel/state-normal/state-normal-4.jpeg'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal-exterior.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal1.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal10.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal12.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal14.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal15.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal16.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal17.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal18.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal2.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal3.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal5.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal6.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal7.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal8.webp'  },
+                        { src: 'img/portfolioCarousel/state-normal/state-normal9.webp'  },
                     ]
                 }" class="relative max-w-5xl mx-auto">
                     <!-- Viewport with a fixed aspect ratio -->
@@ -317,6 +328,99 @@
                 </div>
             </div>
         </section>        
+    
+        <!-- Project 7: Canaveral Port Authority, FL -->
+        <section id="project-7" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Canaveral Port Authority, FL | 2026</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Glazing and structured enhancements for Canaveral Port Authority.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach-portada.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach1.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach10.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach11.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach2.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach3.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach4.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach5.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach6.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach7.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach8.webp' },
+                        { src: 'img/portfolioCarousel/canaveralPort/cocoaBeach9.webp' },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-2 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-2 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Project 8: Topgolf Parsippany, NJ -->
+        <section id="project-8" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Topgolf Parsippany, NJ | 2026</h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Modern glass installations for Topgolf Parsippany.</p>
+                </div>
+                <!-- Carousel -->
+                <div x-data="{
+                    activeSlide: 1,
+                    slides: [
+                        { src: 'img/portfolioCarousel/topGolf/portada-topgolf.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf1.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf10.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf11.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf12.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf13.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf14.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf15.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf2.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf3.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf4.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf5.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf6.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf7.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf8.webp' },
+                        { src: 'img/portfolioCarousel/topGolf/topgolf9.webp' },
+                    ]
+                }" class="relative max-w-5xl mx-auto">
+                    <!-- Viewport with a fixed aspect ratio -->
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-slate-200">
+                        <!-- Slides -->
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div x-show="activeSlide === index + 1" class="absolute inset-0" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide.src" alt="Project Image" class="w-full h-full object-cover">
+                            </div>
+                        </template>
+                    </div>
+                    <!-- Prev/Next Buttons -->
+                    <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 left-2 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 right-2 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 text-white p-2 md:p-3 rounded-full hover:bg-slate-800 focus:outline-none transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->

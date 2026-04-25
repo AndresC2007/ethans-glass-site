@@ -1,0 +1,57 @@
+
+> ethans-glass-site@1.0.0 build
+> vite build
+
+✘ [ERROR] "@tailwindcss/vite" resolved to an ESM file. ESM file cannot be loaded by `require`. See https://vite.dev/guide/troubleshooting.html#this-package-is-esm-only for more details. [plugin externalize-deps]
+
+    node_modules/esbuild/lib/main.js:1225:27:
+      1225 │         let result = await callback({
+           ╵                            ^
+
+    at file:///Users/Andres/ethans-glass-site/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:66928:23
+    at requestCallbacks.on-resolve (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:1225:28)
+    at handleRequest (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:647:17)
+    at handleIncomingPacket (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:672:7)
+    at Socket.readFromStdout (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:600:7)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:343:12)
+    at readableAddChunk (node:internal/streams/readable:316:9)
+    at Readable.push (node:internal/streams/readable:253:10)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:190:23)
+
+  This error came from the "onResolve" callback registered here:
+
+    node_modules/esbuild/lib/main.js:1150:20:
+      1150 │       let promise = setup({
+           ╵                     ^
+
+    at setup (file:///Users/Andres/ethans-glass-site/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:66890:18)
+    at handlePlugins (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:1150:21)
+    at buildOrContextImpl (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:873:5)
+    at Object.buildOrContext (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:699:5)
+    at /Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:2023:15
+    at new Promise (<anonymous>)
+    at Object.build (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:2022:25)
+    at build (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:1873:51)
+    at bundleConfigFile (file:///Users/Andres/ethans-glass-site/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:66845:24)
+
+  The plugin "externalize-deps" was triggered by this import
+
+    vite.config.js:2:24:
+      2 │ import tailwindcss from '@tailwindcss/vite';
+        ╵                         ~~~~~~~~~~~~~~~~~~~
+
+failed to load config from /Users/Andres/ethans-glass-site/vite.config.js
+error during build:
+Error: Build failed with 1 error:
+node_modules/esbuild/lib/main.js:1225:27: ERROR: [plugin: externalize-deps] "@tailwindcss/vite" resolved to an ESM file. ESM file cannot be loaded by `require`. See https://vite.dev/guide/troubleshooting.html#this-package-is-esm-only for more details.
+    at failureErrorWithLog (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:1472:15)
+    at /Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:945:25
+    at runOnEndCallbacks (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:1315:45)
+    at buildResponseToResult (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:943:7)
+    at /Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:970:16
+    at responseCallbacks.<computed> (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:622:9)
+    at handleIncomingPacket (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:677:12)
+    at Socket.readFromStdout (/Users/Andres/ethans-glass-site/node_modules/esbuild/lib/main.js:600:7)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:343:12)
